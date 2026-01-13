@@ -19,6 +19,7 @@
     <ProjectGuid>{C4A71BAD-3C8E-4F06-B0DB-57DE85FDB0DB}</ProjectGuid>
     <RootNamespace>Engine Lib</RootNamespace>
     <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test Release|Win32'" Label="Configuration">
@@ -111,7 +112,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;.\DirectX9 %28June 2010%29\Include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -134,7 +135,7 @@
     <Lib>
       <AdditionalDependencies>zlib.lib;d3d9.lib;d3dx9.lib;dxguid.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\Lib\EngineLib.lib</OutputFile>
-      <AdditionalLibraryDirectories>.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\zlib;.\DirectX9 %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>

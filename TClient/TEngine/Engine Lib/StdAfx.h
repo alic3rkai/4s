@@ -8,6 +8,12 @@
 
 #pragma warning( disable : 4786 4530 4503)
 
+#define POINTER_64 __ptr64  
+typedef unsigned __int64 POINTER_64_INT;
+#if defined(_WIN64)  
+#define POINTER_32 __ptr32  
+#else 
+#endif
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
