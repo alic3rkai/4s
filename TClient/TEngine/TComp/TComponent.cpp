@@ -1529,63 +1529,64 @@ void TComponent::RemoveTextSetting(INT iStart, INT iEnd)
 {
 	std::vector<TextSetting> vInsertData;
 
-	if( iStart > iEnd )
+	if (iStart > iEnd)
 		iEnd = iStart;
 
 	TextSettingSet::iterator itr = m_TextSettingSet.begin();
-	while( itr != m_TextSettingSet.end() )
+	while (itr != m_TextSettingSet.end())
 	{
 		const TextSetting& data = *itr;
 
-		if( (data.iStart > iEnd) || (data.iEnd < iStart) )
+		if ((data.iStart > iEnd) || (data.iEnd < iStart))
 		{
 			++itr;
 			continue;
 		}
 
-		if( iStart > data.iStart )
+		if (iStart > data.iStart)
 		{
-			if( iEnd < data.iEnd )
+			if (iEnd < data.iEnd)
 			{
-				vInsertData.push_back(data);
+				// Split into two parts: before and after the removed range
+				TextSetting before = data;
+				before.iEnd = iStart - 1;
+
+				TextSetting after = data;
+				after.iStart = iEnd + 1;
+
 				itr = m_TextSettingSet.erase(itr);
+				m_TextSettingSet.insert(before);
+				m_TextSettingSet.insert(after);
 				continue;
 			}
 			else
 			{
-				data.iEnd = iStart - 1;
+				// Trim the end
+				TextSetting newData = data;
+				newData.iEnd = iStart - 1;
+				itr = m_TextSettingSet.erase(itr);
+				m_TextSettingSet.insert(newData);
+				continue;
 			}
 		}
-		else 
+		else
 		{
-			if( iEnd < data.iEnd )
+			if (iEnd < data.iEnd)
 			{
-				data.iStart = iEnd + 1;
+				// Trim the start
+				TextSetting newData = data;
+				newData.iStart = iEnd + 1;
+				itr = m_TextSettingSet.erase(itr);
+				m_TextSettingSet.insert(newData);
+				continue;
 			}
 			else
 			{
+				// Remove completely
 				itr = m_TextSettingSet.erase(itr);
 				continue;
 			}
 		}
-
-		++itr;
-	}
-
-	TextSetting inData;
-	for( size_t i=0; i<vInsertData.size(); ++i )
-	{
-		const TextSetting& data = vInsertData[i];
-		inData.dwColor = data.dwColor;
-		inData.dwUser = data.dwUser;
-
-		inData.iStart = data.iStart;
-		inData.iEnd = iStart - 1;
-		m_TextSettingSet.insert( inData );
-
-		inData.iStart = iEnd + 1;
-		inData.iEnd = data.iEnd;
-		m_TextSettingSet.insert( inData );
 	}
 
 	m_bNeedUpdateTextSetting = TRUE;
