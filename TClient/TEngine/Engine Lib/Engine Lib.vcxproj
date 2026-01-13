@@ -82,7 +82,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;.\DirectX9 (June 2010);C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TEST_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -100,9 +100,9 @@
       <Culture>0x0412</Culture>
     </ResourceCompile>
     <Lib>
-      <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib.lib;d3d9.lib;d3dx9.lib;dxguid.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\Lib\EngineLibd.lib</OutputFile>
-      <AdditionalLibraryDirectories>.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
@@ -111,7 +111,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -132,9 +132,9 @@
       <Culture>0x0412</Culture>
     </ResourceCompile>
     <Lib>
-      <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib.lib;d3d9.lib;d3dx9.lib;dxguid.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\Lib\EngineLib.lib</OutputFile>
-      <AdditionalLibraryDirectories>.\zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
@@ -143,7 +143,7 @@
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\TachyonControl;..\Engine Lib;..\TComp;..\TCML;.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;USE_NVPERFHUD;USE_CONSOLE;TEST_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -164,9 +164,9 @@
       <Culture>0x0412</Culture>
     </ResourceCompile>
     <Lib>
-      <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib.lib;d3d9.lib;d3dx9.lib;dxguid.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\Lib\EngineLibTR.lib</OutputFile>
-      <AdditionalLibraryDirectories>.\zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\zlib;C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
