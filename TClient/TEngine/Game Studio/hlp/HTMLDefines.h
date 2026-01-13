@@ -1,5 +1,5 @@
  
-// ?? (ID_* ? IDM_*) 
+// 명령 (ID_* 및 IDM_*) 
 #define HID_BUTTON_ADD                          0x10003
 #define HID_BUTTON_EDIT                         0x10004
 #define HID_BUTTON_DEL                          0x10005
@@ -116,9 +116,9 @@
 #define HID_GRID_EXPLORER                       0x18096
 #define HID_FILE_SET_TEMPPATH                   0x18098
  
-// ???? (IDP_*) 
+// 프롬프트 (IDP_*) 
  
-// ??? (IDR_*) 
+// 리소스 (IDR_*) 
 #define HIDR_MANIFEST                           0x20001
 #define HIDR_MAINFRAME                          0x20080
 #define HIDR_GameStudioTYPE                     0x20081
@@ -162,7 +162,7 @@
 #define HIDR_PS_DETAILMAP                       0x2019A
 #define HIDR_PS_MAP                             0x2019C
  
-// ?? ?? (IDD_*) 
+// 대화 상자 (IDD_*) 
 #define HIDD_ABOUTBOX                           0x20064
 #define HIDD_ATTR_PAGE                          0x2006B
 #define HIDD_DIALOG_PROGRESS                    0x20087
@@ -230,7 +230,7 @@
 #define HIDD_DIALOG_ITEMSCREENSHOT              0x201D5
 #define HIDD_DIALOG_REPLACEDETTEX               0x201D6
  
-// ??? ??? (IDW_*) 
+// 프레임 컨트롤 (IDW_*) 
 // This is a part of the Microsoft Foundation Classes C++ library.
 // Copyright (C) Microsoft Corporation
 // All rights reserved.
@@ -241,22 +241,26 @@
 // See these sources for detailed information regarding the
 // Microsoft Foundation Classes product.
 
+#ifndef __AFX_HH_H__
+#define __AFX_HH_H__
+
+#pragma once
+
+#include <__atlmfc_core.h>
+#pragma warning(push)
+#pragma warning(disable : _ATLMFC_DISABLED_WARNINGS)
+
+#ifdef _AFX_MINREBUILD
+#pragma component(minrebuild, off)
+#endif
+
 // Non-Client HitTest help IDs
 #define HID_HT_NOWHERE                          0x40000
 #define HID_HT_CAPTION                          0x40002
-#define HID_HT_SIZE                             0x40004
 #define HID_HT_HSCROLL                          0x40006
 #define HID_HT_VSCROLL                          0x40007
 #define HID_HT_MINBUTTON                        0x40008
 #define HID_HT_MAXBUTTON                        0x40009
-#define HID_HT_SIZE                             0x4000A // alias: ID_HT_LEFT
-#define HID_HT_SIZE                             0x4000B // alias: ID_HT_RIGHT
-#define HID_HT_SIZE                             0x4000C // alias: ID_HT_TOP
-#define HID_HT_SIZE                             0x4000D // alias: ID_HT_TOPLEFT
-#define HID_HT_SIZE                             0x4000E // alias: ID_HT_TOPRIGHT
-#define HID_HT_SIZE                             0x4000F // alias: ID_HT_BOTTOM
-#define HID_HT_SIZE                             0x40010 // alias: ID_HT_BOTTOMLEFT
-#define HID_HT_SIZE                             0x40011 // alias: ID_HT_BOTTOMRIGHT
 #define HID_HT_SIZE                             0x40012 // alias: ID_HT_BORDER
 #define HID_HT_OBJECT							0x40013
 #define HID_HT_CLOSE							0x40014
@@ -274,42 +278,12 @@
 #define HID_SC_TASKLIST                         0x1EF13
 
 // File MRU and aliases
-#define HID_FILE_MRU_FILE1                      0x1E110
-#define HID_FILE_MRU_FILE1                      0x1E111 // aliases: MRU_2 - MRU_16
-#define HID_FILE_MRU_FILE1                      0x1E112
-#define HID_FILE_MRU_FILE1                      0x1E113
-#define HID_FILE_MRU_FILE1                      0x1E114
-#define HID_FILE_MRU_FILE1                      0x1E115
-#define HID_FILE_MRU_FILE1                      0x1E116
-#define HID_FILE_MRU_FILE1                      0x1E117
-#define HID_FILE_MRU_FILE1                      0x1E118
-#define HID_FILE_MRU_FILE1                      0x1E119
-#define HID_FILE_MRU_FILE1                      0x1E11A
-#define HID_FILE_MRU_FILE1                      0x1E11B
-#define HID_FILE_MRU_FILE1                      0x1E11C
-#define HID_FILE_MRU_FILE1                      0x1E11D
-#define HID_FILE_MRU_FILE1                      0x1E11E
 #define HID_FILE_MRU_FILE1                      0x1E11F
 
 // Window menu list
 #define HID_WINDOW_ALL                          0x1EF1F
 
 // OLE menu and aliases
-#define HID_OLE_VERB_1                          0x1E210
-#define HID_OLE_VERB_1                          0x1E211 // aliases: VERB_2 -> VERB_16
-#define HID_OLE_VERB_1                          0x1E212
-#define HID_OLE_VERB_1                          0x1E213
-#define HID_OLE_VERB_1                          0x1E214
-#define HID_OLE_VERB_1                          0x1E215
-#define HID_OLE_VERB_1                          0x1E216
-#define HID_OLE_VERB_1                          0x1E217
-#define HID_OLE_VERB_1                          0x1E218
-#define HID_OLE_VERB_1                          0x1E219
-#define HID_OLE_VERB_1                          0x1E21A
-#define HID_OLE_VERB_1                          0x1E21B
-#define HID_OLE_VERB_1                          0x1E21C
-#define HID_OLE_VERB_1                          0x1E21D
-#define HID_OLE_VERB_1                          0x1E21E
 #define HID_OLE_VERB_1                          0x1E21F
 
 // Commands (HID_*) 
@@ -514,3 +488,12 @@
 #define AFX_HIDW_DOCKBAR_FLOAT                  0x5E81F
 
 /////////////////////////////////////////////////////////////////////////////
+
+#ifdef _AFX_MINREBUILD
+#pragma component(minrebuild, on)
+#endif
+
+// _ATLMFC_DISABLED_WARNINGS
+#pragma warning(pop)
+
+#endif // __AFX_HH_H__
