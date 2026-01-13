@@ -5,7 +5,7 @@
 CTachyonRes*	g_pImagePool = NULL;
 CTachyonRes*	g_pMenuPool = NULL;
 
-struct LessLOGFONT : public binary_function<LOGFONT, LOGFONT, bool>
+struct LessLOGFONT // : public binary_function<LOGFONT, LOGFONT, bool>
 {	
 	bool operator()(const LOGFONT& _Left, const LOGFONT& _Right) const
 	{	

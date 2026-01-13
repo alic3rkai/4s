@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include <afxisapi.h>
+//#include <afxisapi.h>
 #include <exdispid.h>
 #include "THtmlDocWnd.h"
 #include "TOccManager.h"

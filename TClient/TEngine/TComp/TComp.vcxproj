@@ -71,6 +71,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
+    <IncludePath>C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test Release|Win32'">
     <OutDir>$(Configuration)\</OutDir>
@@ -130,6 +131,7 @@
     <Lib>
       <OutputFile>..\Lib\TComp.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\Tool 2.0\Tachyon Game Studio\TClient\TEngine\Engine Lib\DirectX9 %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test Release|Win32'">
